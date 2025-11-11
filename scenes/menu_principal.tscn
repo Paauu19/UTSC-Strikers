@@ -1,0 +1,142 @@
+[gd_scene load_steps=13 format=3 uid="uid://ck2hdlw5t3wl"]
+
+[ext_resource type="FontFile" uid="uid://cyur175ibhsdw" path="res://assets/ui/Font/Kenney Future.ttf" id="1_i85hu"]
+[ext_resource type="Texture2D" uid="uid://ceb1yel84dgtw" path="res://assets/ui/PNG/background.png" id="1_w5ui5"]
+[ext_resource type="Texture2D" uid="uid://c4opa8ovknd1f" path="res://assets/ui/PNG/Yellow/Default/button_rectangle_gradient.png" id="2_mk4g1"]
+[ext_resource type="Texture2D" uid="uid://ctuyathq37q8c" path="res://assets/ui/PNG/Yellow/Default/button_rectangle_border.png" id="3_iep14"]
+[ext_resource type="Texture2D" uid="uid://be3qlvse5l8w2" path="res://assets/ui/PNG/Green/Double/arrow_basic_e_small.png" id="5_2xgxd"]
+[ext_resource type="Texture2D" uid="uid://dd20e1kg4njhh" path="res://assets/ui/PNG/Green/Default/button_rectangle_depth_gloss.png" id="5_qcl6i"]
+[ext_resource type="Texture2D" uid="uid://d3s14e58t7enb" path="res://assets/ui/PNG/Green/Default/star.png" id="7_8k4fm"]
+[ext_resource type="Texture2D" uid="uid://6uqvy2mufala" path="res://assets/ui/PNG/Green/Double/icon_square.png" id="8_lgh5n"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mk4g1"]
+font = ExtResource("1_i85hu")
+font_size = 70
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nxt0m"]
+texture = ExtResource("5_qcl6i")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2xgxd"]
+texture = ExtResource("5_qcl6i")
+modulate_color = Color(0.42879996, 0.64, 0.58015996, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8k4fm"]
+texture = ExtResource("5_qcl6i")
+modulate_color = Color(0.5092, 0.76, 0.68894, 1)
+
+[node name="MenuPrincipal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FondoCampo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_w5ui5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -406.0
+offset_top = 25.0
+offset_right = 394.0
+offset_bottom = 125.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Titulo" type="NinePatchRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+texture = ExtResource("2_mk4g1")
+patch_margin_left = 31
+patch_margin_top = 15
+patch_margin_right = 15
+patch_margin_bottom = 9
+
+[node name="Titulo" type="Label" parent="VBoxContainer/Titulo"]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 80.0
+text = "UTSC STRIKERS"
+label_settings = SubResource("LabelSettings_mk4g1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="botones" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(0, 350)
+layout_mode = 0
+offset_left = 410.0
+offset_top = 160.0
+offset_right = 733.0
+offset_bottom = 510.0
+texture = ExtResource("3_iep14")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 13
+
+[node name="ContenedorBotones" type="VBoxContainer" parent="botones"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="BotonStart" type="Button" parent="botones/ContenedorBotones"]
+custom_minimum_size = Vector2(220, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_i85hu")
+theme_override_font_sizes/font_size = 25
+theme_override_icons/icon = ExtResource("5_2xgxd")
+theme_override_styles/normal = SubResource("StyleBoxTexture_nxt0m")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2xgxd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8k4fm")
+text = "Iniciar
+"
+icon_alignment = 1
+
+[node name="BotonAbout" type="Button" parent="botones/ContenedorBotones"]
+custom_minimum_size = Vector2(220, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_i85hu")
+theme_override_font_sizes/font_size = 20
+theme_override_icons/icon = ExtResource("7_8k4fm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_nxt0m")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2xgxd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8k4fm")
+text = "Sobre 
+Nosotros
+"
+icon_alignment = 1
+
+[node name="BotonAjustes" type="Button" parent="botones/ContenedorBotones"]
+custom_minimum_size = Vector2(220, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_i85hu")
+theme_override_font_sizes/font_size = 25
+theme_override_icons/icon = ExtResource("8_lgh5n")
+theme_override_styles/normal = SubResource("StyleBoxTexture_nxt0m")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2xgxd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8k4fm")
+text = "Ajustes
+"
+icon_alignment = 1
+
+[node name="Balon" type="AnimatedSprite2D" parent="."]
