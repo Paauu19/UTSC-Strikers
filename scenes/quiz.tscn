@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6d4ngmnttf45"]
+
+[ext_resource type="Texture2D" uid="uid://dtlrjqth456l0" path="res://assets/ui/PNG/Quiz/quiz_board_background.png" id="1_jng0p"]
+[ext_resource type="Texture2D" uid="uid://bgy4xb1ydo1pk" path="res://assets/ui/PNG/Quiz/Heart-sprite.png" id="2_2fkxq"]
+
+[node name="Node" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(400, 350)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_jng0p")
+expand_mode = 1
+
+[node name="Control" type="Control" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureRect/Control"]
+position = Vector2(40, 40)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_2fkxq")
+centered = false
+hframes = 4
+
+[node name="Sprite2D2" type="Sprite2D" parent="TextureRect/Control"]
+position = Vector2(135, 40)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_2fkxq")
+centered = false
+hframes = 4
+
+[node name="Sprite2D3" type="Sprite2D" parent="TextureRect/Control"]
+position = Vector2(230, 40)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_2fkxq")
+centered = false
+hframes = 4
