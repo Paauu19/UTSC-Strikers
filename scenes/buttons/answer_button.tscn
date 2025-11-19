@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://jqhoc5dskoas"]
+
+[ext_resource type="Texture2D" uid="uid://c8fk47l4bwo86" path="res://assets/ui/PNG/Green/Double/button_rectangle_depth_border.png" id="2_2bdbl"]
+[ext_resource type="FontFile" uid="uid://cyur175ibhsdw" path="res://assets/ui/Font/Kenney Future.ttf" id="3_5bb88"]
+
+[node name="TextureRect" type="TextureRect"]
+offset_right = 200.0
+offset_bottom = 64.0
+texture = ExtResource("2_2bdbl")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 25.0
+offset_right = 360.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.14509805, 1, 0.30980393, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_5bb88")
+text = "RESPUESTA CORRECTA"
+horizontal_alignment = 1
+vertical_alignment = 1
