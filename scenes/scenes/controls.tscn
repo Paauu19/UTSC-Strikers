@@ -1,0 +1,282 @@
+[gd_scene load_steps=29 format=3 uid="uid://cb1ea2vp8yxrv"]
+
+[ext_resource type="Script" uid="uid://dej64ivwnr5hj" path="res://scenes/scenes/controls.gd" id="1_a3uak"]
+[ext_resource type="Texture2D" uid="uid://ser5lxxkvyfl" path="res://assets/ui/PNG/Quiz/quiz_background.png" id="2_3njaj"]
+[ext_resource type="Texture2D" uid="uid://cuaj2jspgj43n" path="res://assets/ui/PNG/Red/Default/button_rectangle_gradient.png" id="2_a3uak"]
+[ext_resource type="FontFile" uid="uid://cyur175ibhsdw" path="res://assets/ui/Font/Kenney Future.ttf" id="3_3njaj"]
+[ext_resource type="Texture2D" uid="uid://qv8q543s8wk7" path="res://assets/ui/PNG/Red/Double/button_rectangle_depth_gradient.png" id="5_qmilr"]
+[ext_resource type="Texture2D" uid="uid://bth7qn1yh07q2" path="res://assets/ui/PNG/Red/Double/button_rectangle_depth_gloss.png" id="6_grleb"]
+[ext_resource type="Texture2D" uid="uid://dfie3dwttql0p" path="res://assets/ui/PNG/Red/Double/icon_cross.png" id="7_05uvl"]
+[ext_resource type="Texture2D" uid="uid://dyt1hi6wm3yl1" path="res://assets/ui/PNG/Red/Double/button_rectangle_depth_border.png" id="8_3njaj"]
+[ext_resource type="Texture2D" uid="uid://dcl520m164kby" path="res://assets/ui/PNG/Yellow/Double/button_rectangle_depth_border.png" id="9_r4ly6"]
+[ext_resource type="Texture2D" uid="uid://c8fk47l4bwo86" path="res://assets/ui/PNG/Green/Double/button_rectangle_depth_border.png" id="10_qmilr"]
+[ext_resource type="Texture2D" uid="uid://dduimcfrqrmam" path="res://assets/ui/PNG/Blue/Double/button_rectangle_depth_border.png" id="11_grleb"]
+[ext_resource type="FontFile" uid="uid://c45dcu5gt2sf4" path="res://assets/ui/Font/Kenney Future Narrow.ttf" id="12_r4ly6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_icojs"]
+font = ExtResource("3_3njaj")
+font_size = 70
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ijnp3"]
+texture = ExtResource("2_a3uak")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v513l"]
+texture = ExtResource("5_qmilr")
+modulate_color = Color(0.42879996, 0.64, 0.58015996, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4epms"]
+texture = ExtResource("6_grleb")
+modulate_color = Color(0.5092, 0.76, 0.68894, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_05uvl"]
+texture = ExtResource("8_3njaj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f4sat"]
+texture = ExtResource("9_r4ly6")
+modulate_color = Color(1, 1, 1, 0.89411765)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8mw32"]
+texture = ExtResource("9_r4ly6")
+modulate_color = Color(1, 1, 1, 0.89411765)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_icojs"]
+texture = ExtResource("9_r4ly6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2krs8"]
+texture = ExtResource("9_r4ly6")
+modulate_color = Color(1, 1, 1, 0.89411765)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qc13f"]
+texture = ExtResource("9_r4ly6")
+modulate_color = Color(1, 1, 1, 0.85882354)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l7m3e"]
+texture = ExtResource("10_qmilr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7cfrk"]
+texture = ExtResource("10_qmilr")
+modulate_color = Color(1, 1, 1, 0.89411765)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1tb8j"]
+texture = ExtResource("10_qmilr")
+modulate_color = Color(1, 1, 1, 0.85882354)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6rb2i"]
+texture = ExtResource("11_grleb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cf8gx"]
+texture = ExtResource("11_grleb")
+modulate_color = Color(1, 1, 1, 0.89411765)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bdxkg"]
+texture = ExtResource("11_grleb")
+modulate_color = Color(1, 1, 1, 0.85882354)
+
+[node name="controls" type="Node"]
+script = ExtResource("1_a3uak")
+
+[node name="FondoCampo" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3njaj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FondoCampo"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -406.0
+offset_top = 25.0
+offset_right = 394.0
+offset_bottom = 125.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Titulo" type="NinePatchRect" parent="FondoCampo/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+texture = ExtResource("2_a3uak")
+patch_margin_left = 31
+patch_margin_top = 15
+patch_margin_right = 15
+patch_margin_bottom = 9
+
+[node name="Titulo" type="Label" parent="FondoCampo/VBoxContainer/Titulo"]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 80.0
+text = "Controles"
+label_settings = SubResource("LabelSettings_icojs")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotonVolver" type="Button" parent="FondoCampo"]
+custom_minimum_size = Vector2(180, 100)
+layout_mode = 0
+offset_left = 498.0
+offset_top = 523.0
+offset_right = 678.0
+offset_bottom = 623.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_3njaj")
+theme_override_font_sizes/font_size = 25
+theme_override_icons/icon = ExtResource("7_05uvl")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ijnp3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_v513l")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4epms")
+text = "Volver a
+Menu
+"
+icon_alignment = 1
+
+[node name="BotonOpcion1" type="Button" parent="FondoCampo"]
+custom_minimum_size = Vector2(270, 140)
+layout_mode = 0
+offset_left = 252.0
+offset_top = 209.0
+offset_right = 522.0
+offset_bottom = 349.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_05uvl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_f4sat")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8mw32")
+text = "RESPUESTA CORRECTA
+"
+
+[node name="Label" type="Label" parent="FondoCampo/BotonOpcion1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = -57.0
+offset_right = 123.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.1254902, 0.11372549, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_3njaj")
+text = "RESPUESTA CORRECTA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotonOpcion2" type="Button" parent="FondoCampo"]
+custom_minimum_size = Vector2(270, 140)
+layout_mode = 0
+offset_left = 252.0
+offset_top = 379.0
+offset_right = 522.0
+offset_bottom = 519.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_icojs")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2krs8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qc13f")
+
+[node name="Label" type="Label" parent="FondoCampo/BotonOpcion2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = -57.0
+offset_right = 123.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.92156863, 0.8666667, 0.18039216, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_3njaj")
+text = "RESPUESTA CORRECTA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotonOpcion3" type="Button" parent="FondoCampo"]
+custom_minimum_size = Vector2(270, 140)
+layout_mode = 0
+offset_left = 652.0
+offset_top = 209.0
+offset_right = 922.0
+offset_bottom = 349.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_l7m3e")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7cfrk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_1tb8j")
+
+[node name="Label" type="Label" parent="FondoCampo/BotonOpcion3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = -57.0
+offset_right = 123.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.17254902, 0.85490197, 0.12156863, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_3njaj")
+text = "RESPUESTA CORRECTA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotonOpcion4" type="Button" parent="FondoCampo"]
+custom_minimum_size = Vector2(270, 140)
+layout_mode = 0
+offset_left = 652.0
+offset_top = 379.0
+offset_right = 922.0
+offset_bottom = 519.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_6rb2i")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cf8gx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bdxkg")
+
+[node name="Label" type="Label" parent="FondoCampo/BotonOpcion4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = -57.0
+offset_right = 123.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.17254902, 0.6627451, 0.9098039, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_3njaj")
+text = "RESPUESTA CORRECTA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="FondoCampo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -372.0
+offset_top = 122.0
+offset_right = 392.0
+offset_bottom = 199.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("12_r4ly6")
+theme_override_font_sizes/font_size = 16
+text = "¿Cual es tu nombre?"
+horizontal_alignment = 1
+vertical_alignment = 1

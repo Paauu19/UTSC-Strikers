@@ -1,12 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://jqhoc5dskoas"]
+[gd_scene load_steps=7 format=3 uid="uid://jqhoc5dskoas"]
 
 [ext_resource type="Texture2D" uid="uid://c8fk47l4bwo86" path="res://assets/ui/PNG/Green/Double/button_rectangle_depth_border.png" id="2_2bdbl"]
+[ext_resource type="Texture2D" uid="uid://17yu1g85gg24" path="res://assets/ui/PNG/Green/Double/button_rectangle_border.png" id="2_ti0kq"]
 [ext_resource type="FontFile" uid="uid://cyur175ibhsdw" path="res://assets/ui/Font/Kenney Future.ttf" id="3_5bb88"]
 
-[node name="TextureRect" type="TextureRect"]
-offset_right = 200.0
-offset_bottom = 64.0
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sjegs"]
 texture = ExtResource("2_2bdbl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ti0kq"]
+texture = ExtResource("2_2bdbl")
+modulate_color = Color(1, 1, 1, 0.89411765)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2bdbl"]
+texture = ExtResource("2_ti0kq")
+modulate_color = Color(1, 1, 1, 0.85882354)
+
+[node name="BotonOpcion" type="Button"]
+offset_right = 384.0
+offset_bottom = 128.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_sjegs")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ti0kq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2bdbl")
+icon = ExtResource("2_2bdbl")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0

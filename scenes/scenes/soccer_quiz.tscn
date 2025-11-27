@@ -1,0 +1,232 @@
+[gd_scene load_steps=21 format=3 uid="uid://bfjh7qpfa320t"]
+
+[ext_resource type="Texture2D" uid="uid://dtlrjqth456l0" path="res://assets/ui/PNG/Quiz/quiz_board_background.png" id="1_8pfwv"]
+[ext_resource type="Texture2D" uid="uid://cv6qg2edbslxi" path="res://assets/ui/PNG/Quiz/heart_full.tres" id="2_cog54"]
+[ext_resource type="FontFile" uid="uid://c45dcu5gt2sf4" path="res://assets/ui/Font/Kenney Future Narrow.ttf" id="3_uyejr"]
+[ext_resource type="Texture2D" uid="uid://dyt1hi6wm3yl1" path="res://assets/ui/PNG/Red/Double/button_rectangle_depth_border.png" id="4_rhgme"]
+[ext_resource type="Texture2D" uid="uid://dcl520m164kby" path="res://assets/ui/PNG/Yellow/Double/button_rectangle_depth_border.png" id="5_yuys0"]
+[ext_resource type="FontFile" uid="uid://cyur175ibhsdw" path="res://assets/ui/Font/Kenney Future.ttf" id="6_o7spk"]
+[ext_resource type="Texture2D" uid="uid://c8fk47l4bwo86" path="res://assets/ui/PNG/Green/Double/button_rectangle_depth_border.png" id="7_vj52a"]
+[ext_resource type="Texture2D" uid="uid://dduimcfrqrmam" path="res://assets/ui/PNG/Blue/Double/button_rectangle_depth_border.png" id="8_hyk8q"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_litaj"]
+texture = ExtResource("4_rhgme")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_smmpl"]
+texture = ExtResource("5_yuys0")
+modulate_color = Color(1, 1, 1, 0.89411765)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_46brj"]
+texture = ExtResource("5_yuys0")
+modulate_color = Color(1, 1, 1, 0.89411765)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g5iop"]
+texture = ExtResource("5_yuys0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nd0t3"]
+texture = ExtResource("5_yuys0")
+modulate_color = Color(1, 1, 1, 0.89411765)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_akr6e"]
+texture = ExtResource("5_yuys0")
+modulate_color = Color(1, 1, 1, 0.85882354)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3w0cg"]
+texture = ExtResource("7_vj52a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yhkjn"]
+texture = ExtResource("7_vj52a")
+modulate_color = Color(1, 1, 1, 0.89411765)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vqc7w"]
+texture = ExtResource("7_vj52a")
+modulate_color = Color(1, 1, 1, 0.85882354)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a65by"]
+texture = ExtResource("8_hyk8q")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3a7r0"]
+texture = ExtResource("8_hyk8q")
+modulate_color = Color(1, 1, 1, 0.89411765)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ivkdb"]
+texture = ExtResource("8_hyk8q")
+modulate_color = Color(1, 1, 1, 0.85882354)
+
+[node name="SoccerQuiz" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(400, 350)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8pfwv")
+expand_mode = 1
+
+[node name="HeartsContainer" type="HBoxContainer" parent="TextureRect"]
+layout_mode = 1
+offset_left = 45.0
+offset_top = 35.0
+offset_right = 578.0
+offset_bottom = 215.0
+scale = Vector2(0.5, 0.5)
+
+[node name="HeartTextureRect" type="TextureRect" parent="TextureRect/HeartsContainer"]
+layout_mode = 2
+texture = ExtResource("2_cog54")
+
+[node name="HeartTextureRect2" type="TextureRect" parent="TextureRect/HeartsContainer"]
+layout_mode = 2
+texture = ExtResource("2_cog54")
+
+[node name="HeartTextureRect3" type="TextureRect" parent="TextureRect/HeartsContainer"]
+layout_mode = 2
+texture = ExtResource("2_cog54")
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -186.0
+offset_top = 60.0
+offset_right = 414.0
+offset_bottom = 160.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_uyejr")
+theme_override_font_sizes/font_size = 16
+text = "¿Cual es tu nombre?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotonOpcion1" type="Button" parent="TextureRect"]
+custom_minimum_size = Vector2(270, 140)
+layout_mode = 1
+offset_left = 250.0
+offset_top = 170.0
+offset_right = 520.0
+offset_bottom = 310.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_litaj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_smmpl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_46brj")
+text = "RESPUESTA CORRECTA
+"
+
+[node name="Label" type="Label" parent="TextureRect/BotonOpcion1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = -57.0
+offset_right = 123.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.1254902, 0.11372549, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("6_o7spk")
+text = "RESPUESTA CORRECTA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotonOpcion2" type="Button" parent="TextureRect"]
+custom_minimum_size = Vector2(270, 140)
+layout_mode = 0
+offset_left = 250.0
+offset_top = 340.0
+offset_right = 520.0
+offset_bottom = 480.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_g5iop")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_nd0t3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_akr6e")
+
+[node name="Label" type="Label" parent="TextureRect/BotonOpcion2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = -57.0
+offset_right = 123.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.92156863, 0.8666667, 0.18039216, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("6_o7spk")
+text = "RESPUESTA CORRECTA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotonOpcion3" type="Button" parent="TextureRect"]
+custom_minimum_size = Vector2(270, 140)
+layout_mode = 0
+offset_left = 650.0
+offset_top = 170.0
+offset_right = 920.0
+offset_bottom = 310.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_3w0cg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yhkjn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vqc7w")
+
+[node name="Label" type="Label" parent="TextureRect/BotonOpcion3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = -57.0
+offset_right = 123.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.17254902, 0.85490197, 0.12156863, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("6_o7spk")
+text = "RESPUESTA CORRECTA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotonOpcion4" type="Button" parent="TextureRect"]
+custom_minimum_size = Vector2(270, 140)
+layout_mode = 0
+offset_left = 650.0
+offset_top = 340.0
+offset_right = 920.0
+offset_bottom = 480.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_a65by")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3a7r0")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ivkdb")
+
+[node name="Label" type="Label" parent="TextureRect/BotonOpcion4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = -57.0
+offset_right = 123.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.17254902, 0.6627451, 0.9098039, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("6_o7spk")
+text = "RESPUESTA CORRECTA"
+horizontal_alignment = 1
+vertical_alignment = 1

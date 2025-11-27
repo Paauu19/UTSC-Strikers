@@ -1,0 +1,144 @@
+[gd_scene load_steps=15 format=3 uid="uid://c2ox8k77nigqi"]
+
+[ext_resource type="Script" uid="uid://cwegckad4jiit" path="res://scenes/scenes/screens/quiz/modo_quiz_select.gd" id="1_qauw7"]
+[ext_resource type="Texture2D" uid="uid://ibym6x37atgw" path="res://assets/ui/PNG/Quiz/quizmode_background.png" id="1_qbbm4"]
+[ext_resource type="Texture2D" uid="uid://cuaj2jspgj43n" path="res://assets/ui/PNG/Red/Default/button_rectangle_gradient.png" id="2_btmb3"]
+[ext_resource type="FontFile" uid="uid://cyur175ibhsdw" path="res://assets/ui/Font/Kenney Future.ttf" id="3_t4ifb"]
+[ext_resource type="Texture2D" uid="uid://bm6mkh63mxudi" path="res://assets/ui/PNG/Red/Double/arrow_decorative_e_small.png" id="4_btmb3"]
+[ext_resource type="Texture2D" uid="uid://qv8q543s8wk7" path="res://assets/ui/PNG/Red/Double/button_rectangle_depth_gradient.png" id="5_t4ifb"]
+[ext_resource type="Texture2D" uid="uid://dfie3dwttql0p" path="res://assets/ui/PNG/Red/Double/icon_cross.png" id="6_btmb3"]
+[ext_resource type="Texture2D" uid="uid://bth7qn1yh07q2" path="res://assets/ui/PNG/Red/Double/button_rectangle_depth_gloss.png" id="6_qauw7"]
+[ext_resource type="Texture2D" uid="uid://bi76ycj5yj7hx" path="res://assets/ui/PNG/Red/Double/check_square_color.png" id="7_btmb3"]
+[ext_resource type="Texture2D" uid="uid://2gklx5nq0ito" path="res://assets/ui/PNG/Red/Double/check_round_color.png" id="8_t4ifb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_adg1h"]
+font = ExtResource("3_t4ifb")
+font_size = 70
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_naq83"]
+texture = ExtResource("2_btmb3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8vvhu"]
+texture = ExtResource("5_t4ifb")
+modulate_color = Color(0.42879996, 0.64, 0.58015996, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_awy7l"]
+texture = ExtResource("6_qauw7")
+modulate_color = Color(0.5092, 0.76, 0.68894, 1)
+
+[node name="modo_quiz_select" type="Node"]
+script = ExtResource("1_qauw7")
+
+[node name="FondoCampo" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_qbbm4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FondoCampo"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -450.0
+offset_top = 24.0
+offset_right = 456.0
+offset_bottom = 124.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="Titulo" type="NinePatchRect" parent="FondoCampo/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+texture = ExtResource("2_btmb3")
+patch_margin_left = 31
+patch_margin_top = 15
+patch_margin_right = 15
+patch_margin_bottom = 9
+
+[node name="Titulo" type="Label" parent="FondoCampo/VBoxContainer/Titulo"]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 80.0
+text = "UTSC STRIKERS QUIZ"
+label_settings = SubResource("LabelSettings_adg1h")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotonStart" type="Button" parent="FondoCampo"]
+custom_minimum_size = Vector2(180, 100)
+layout_mode = 0
+offset_left = 489.0
+offset_top = 162.0
+offset_right = 669.0
+offset_bottom = 262.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_t4ifb")
+theme_override_font_sizes/font_size = 25
+theme_override_icons/icon = ExtResource("4_btmb3")
+theme_override_styles/normal = SubResource("StyleBoxTexture_naq83")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8vvhu")
+theme_override_styles/hover = SubResource("StyleBoxTexture_awy7l")
+text = "MIxto
+"
+icon_alignment = 1
+
+[node name="BotonVolver" type="Button" parent="FondoCampo"]
+custom_minimum_size = Vector2(180, 100)
+layout_mode = 0
+offset_left = 467.0
+offset_top = 509.0
+offset_right = 647.0
+offset_bottom = 609.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_t4ifb")
+theme_override_font_sizes/font_size = 25
+theme_override_icons/icon = ExtResource("6_btmb3")
+theme_override_styles/normal = SubResource("StyleBoxTexture_naq83")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8vvhu")
+theme_override_styles/hover = SubResource("StyleBoxTexture_awy7l")
+text = "Volver a
+Menu
+"
+icon_alignment = 1
+
+[node name="BotonControls" type="Button" parent="FondoCampo"]
+custom_minimum_size = Vector2(180, 100)
+layout_mode = 0
+offset_left = 260.0
+offset_top = 191.0
+offset_right = 480.0
+offset_bottom = 291.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_t4ifb")
+theme_override_font_sizes/font_size = 25
+theme_override_icons/icon = ExtResource("7_btmb3")
+theme_override_styles/normal = SubResource("StyleBoxTexture_naq83")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8vvhu")
+theme_override_styles/hover = SubResource("StyleBoxTexture_awy7l")
+text = "soCCER
+"
+icon_alignment = 1
+
+[node name="BotonAbout" type="Button" parent="FondoCampo"]
+custom_minimum_size = Vector2(180, 100)
+layout_mode = 0
+offset_left = 679.0
+offset_top = 192.0
+offset_right = 899.0
+offset_bottom = 292.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_t4ifb")
+theme_override_font_sizes/font_size = 20
+theme_override_icons/icon = ExtResource("8_t4ifb")
+theme_override_styles/normal = SubResource("StyleBoxTexture_naq83")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8vvhu")
+theme_override_styles/hover = SubResource("StyleBoxTexture_awy7l")
+text = "ThermoWatch
+"
+icon_alignment = 1

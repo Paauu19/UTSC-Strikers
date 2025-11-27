@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://cv6qg2edbslxi"]
+
+[ext_resource type="Texture2D" uid="uid://bgy4xb1ydo1pk" path="res://assets/ui/PNG/Quiz/Heart-sprite.png" id="1_do1f6"]
+
+[resource]
+atlas = ExtResource("1_do1f6")
+region = Rect2(0, 0, 175, 180)

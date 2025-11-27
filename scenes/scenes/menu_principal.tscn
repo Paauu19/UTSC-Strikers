@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://ck2hdlw5t3wl"]
+[gd_scene load_steps=14 format=3 uid="uid://ck2hdlw5t3wl"]
 
+[ext_resource type="Script" uid="uid://dqw2oagwxnxhh" path="res://scenes/scenes/screens/main_menu/menu_principal.gd" id="1_fxpxy"]
 [ext_resource type="FontFile" uid="uid://cyur175ibhsdw" path="res://assets/ui/Font/Kenney Future.ttf" id="1_i85hu"]
 [ext_resource type="Texture2D" uid="uid://ceb1yel84dgtw" path="res://assets/ui/PNG/background.png" id="1_w5ui5"]
 [ext_resource type="Texture2D" uid="uid://c4opa8ovknd1f" path="res://assets/ui/PNG/Yellow/Default/button_rectangle_gradient.png" id="2_mk4g1"]
@@ -26,16 +27,10 @@ modulate_color = Color(0.42879996, 0.64, 0.58015996, 1)
 texture = ExtResource("5_qcl6i")
 modulate_color = Color(0.5092, 0.76, 0.68894, 1)
 
-[node name="MenuPrincipal" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="MenuPrincipal" type="Node"]
+script = ExtResource("1_fxpxy")
 
 [node name="FondoCampo" type="TextureRect" parent="."]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -45,7 +40,6 @@ texture = ExtResource("1_w5ui5")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(0, 10)
-layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -76,7 +70,6 @@ vertical_alignment = 1
 
 [node name="botones" type="NinePatchRect" parent="."]
 custom_minimum_size = Vector2(0, 350)
-layout_mode = 0
 offset_left = 410.0
 offset_top = 160.0
 offset_right = 733.0
@@ -110,22 +103,7 @@ text = "Iniciar
 "
 icon_alignment = 1
 
-[node name="BotonAbout" type="Button" parent="botones/ContenedorBotones"]
-custom_minimum_size = Vector2(220, 70)
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("1_i85hu")
-theme_override_font_sizes/font_size = 20
-theme_override_icons/icon = ExtResource("7_8k4fm")
-theme_override_styles/normal = SubResource("StyleBoxTexture_nxt0m")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_2xgxd")
-theme_override_styles/hover = SubResource("StyleBoxTexture_8k4fm")
-text = "Sobre 
-Nosotros
-"
-icon_alignment = 1
-
-[node name="BotonAjustes" type="Button" parent="botones/ContenedorBotones"]
+[node name="BotonControls" type="Button" parent="botones/ContenedorBotones"]
 custom_minimum_size = Vector2(220, 70)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -135,8 +113,20 @@ theme_override_icons/icon = ExtResource("8_lgh5n")
 theme_override_styles/normal = SubResource("StyleBoxTexture_nxt0m")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_2xgxd")
 theme_override_styles/hover = SubResource("StyleBoxTexture_8k4fm")
-text = "Ajustes
+text = "Controles
 "
 icon_alignment = 1
 
-[node name="Balon" type="AnimatedSprite2D" parent="."]
+[node name="BotonAbout" type="Button" parent="botones/ContenedorBotones"]
+custom_minimum_size = Vector2(220, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_i85hu")
+theme_override_font_sizes/font_size = 24
+theme_override_icons/icon = ExtResource("7_8k4fm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_nxt0m")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2xgxd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8k4fm")
+text = "About
+"
+icon_alignment = 1
