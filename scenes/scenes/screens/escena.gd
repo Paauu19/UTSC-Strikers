@@ -1,4 +1,4 @@
-extends Control # Base para UI
+extends RefCounted
 class_name Screen
 
 signal screen_transition_requested(new_screen: SoccerGame.ScreenType, data: ScreenData)
