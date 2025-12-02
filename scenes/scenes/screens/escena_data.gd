@@ -3,7 +3,7 @@ class_name ScreenData
 
 var tournament = null
 var mode: String = ""
-var quiz_theme: String = "" # Usaremos esto para indicar qué quiz cargar
+var quiz_theme: String = ""
 
 static func build() -> ScreenData:
 	return ScreenData.new()

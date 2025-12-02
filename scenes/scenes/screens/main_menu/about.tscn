@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://sxjchphwf78u"]
 
-[ext_resource type="Script" uid="uid://dnafnjic1kalb" path="res://scenes/scenes/screens/main_menu/about.gd" id="1_b26a2"]
+[ext_resource type="Script" uid="uid://dnafnjic1kalb" path="res://scenes/scenes/about.gd" id="1_b26a2"]
 [ext_resource type="Texture2D" uid="uid://ser5lxxkvyfl" path="res://assets/ui/PNG/Quiz/quiz_background.png" id="1_mcjkt"]
 [ext_resource type="Texture2D" uid="uid://bkm0e7ymcakc1" path="res://assets/ui/PNG/Blue/Double/button_rectangle_depth_gradient.png" id="2_l0cra"]
 [ext_resource type="FontFile" uid="uid://cyur175ibhsdw" path="res://assets/ui/Font/Kenney Future.ttf" id="3_yhja8"]
@@ -38,13 +38,18 @@ modulate_color = Color(1, 1, 1, 0.89411765)
 texture = ExtResource("10_2t11x")
 modulate_color = Color(1, 1, 1, 0.85882354)
 
-[node name="about" type="Node"]
+[node name="about" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_b26a2")
 
 [node name="FondoCampo" type="TextureRect" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 1152.0
+offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_mcjkt")

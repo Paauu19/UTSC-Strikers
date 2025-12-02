@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://c2ox8k77nigqi"]
 
-[ext_resource type="Script" uid="uid://cwegckad4jiit" path="res://scenes/scenes/screens/quiz/modo_quiz_select.gd" id="1_qauw7"]
+[ext_resource type="Script" uid="uid://cwegckad4jiit" path="res://scenes/scenes/modo_quiz_select.gd" id="1_qauw7"]
 [ext_resource type="Texture2D" uid="uid://ibym6x37atgw" path="res://assets/ui/PNG/Quiz/quizmode_background.png" id="1_qbbm4"]
 [ext_resource type="Texture2D" uid="uid://cuaj2jspgj43n" path="res://assets/ui/PNG/Red/Default/button_rectangle_gradient.png" id="2_btmb3"]
 [ext_resource type="FontFile" uid="uid://cyur175ibhsdw" path="res://assets/ui/Font/Kenney Future.ttf" id="3_t4ifb"]
@@ -28,13 +28,18 @@ modulate_color = Color(0.42879996, 0.64, 0.58015996, 1)
 texture = ExtResource("6_qauw7")
 modulate_color = Color(0.5092, 0.76, 0.68894, 1)
 
-[node name="modo_quiz_select" type="Node"]
+[node name="modo_quiz_select" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_qauw7")
 
 [node name="FondoCampo" type="TextureRect" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 1152.0
+offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_qbbm4")
@@ -70,7 +75,8 @@ label_settings = SubResource("LabelSettings_adg1h")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="BotonStart" type="Button" parent="FondoCampo"]
+[node name="BotonMixto" type="Button" parent="FondoCampo"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(180, 100)
 layout_mode = 0
 offset_left = 489.0
@@ -89,6 +95,7 @@ text = "MIxto
 icon_alignment = 1
 
 [node name="BotonVolver" type="Button" parent="FondoCampo"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(180, 100)
 layout_mode = 0
 offset_left = 467.0
@@ -107,7 +114,8 @@ Menu
 "
 icon_alignment = 1
 
-[node name="BotonControls" type="Button" parent="FondoCampo"]
+[node name="BotonSoccer" type="Button" parent="FondoCampo"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(180, 100)
 layout_mode = 0
 offset_left = 260.0
@@ -125,7 +133,8 @@ text = "soCCER
 "
 icon_alignment = 1
 
-[node name="BotonAbout" type="Button" parent="FondoCampo"]
+[node name="BotonThermowatch" type="Button" parent="FondoCampo"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(180, 100)
 layout_mode = 0
 offset_left = 679.0

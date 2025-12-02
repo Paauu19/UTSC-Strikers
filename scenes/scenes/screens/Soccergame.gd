@@ -1,48 +1,44 @@
 extends Node
 class_name SoccerGame
 
-# 1. Definición de todos los tipos de pantalla (ScreenType)
-# Incluye los que ya tenías y los nuevos tipos de Quiz que definimos:
 enum ScreenType {
-	MAIN_MENU, 
-	QUIZ_MODE_SELECTION, 
-	CONTROLS, 
-	ABOUT, 
-	TEST_QUIZ ,
-	MIXED_QUIZ , 
-	THERMOWATCH_QUIZ,      # Quiz de Test
-	SOCCER_QUIZ,       # Quiz Mundial 2025     # Quiz sobre tu proyecto (Añadido)
+	MAIN_MENU,
+	QUIZ_MODE_SELECTION,
+	CONTROLS,
+	ABOUT,
+	TEST_QUIZ,
+	MIXED_QUIZ,
+	THERMOWATCH_QUIZ,
+	SOCCER_QUIZ,
 }
 
-var current_screen : Screen = null
+var current_screen: Screen
 var screen_factory := ScreenFactory.new()
 
-func _init() -> void:
-	# Inicia el juego mostrando el Menú Principal
+func _ready() -> void:
+	print("🎮 SoccerGame iniciado.")
 	switch_screen(ScreenType.MAIN_MENU)
 
-# 2. Función principal para cambiar de pantalla
 func switch_screen(screen: ScreenType, data: ScreenData = ScreenData.new()) -> void:
-	# A. Eliminar la pantalla actual
-	if current_screen != null:
+	if current_screen:
+		print("🔄 Eliminando escena actual: ", current_screen.name)
 		current_screen.queue_free()
-	
-	# B. Instanciar la nueva pantalla usando la fábrica
-	current_screen = screen_factory.get_fresh_screen(screen)
-	
-	if current_screen != null:
-		# C. Configurar el contexto y los datos de la pantalla
-		current_screen.setup(self, data)
-		
-		# D. Conectar la señal de transición de la nueva pantalla
-		# Esto permite que la pantalla, al llamar a transition_screen(), 
-		# active nuevamente esta función (switch_screen) con la nueva pantalla solicitada.
-		if current_screen.screen_transition_requested.is_connected(switch_screen.bind()):
-			current_screen.screen_transition_requested.disconnect(switch_screen.bind())
-			
-		current_screen.screen_transition_requested.connect(switch_screen.bind())
-		
-		# E. Añadir la nueva pantalla al árbol de escena
-		call_deferred("add_child", current_screen)
-	else:
-		push_error("No se pudo cargar la pantalla: " + str(screen))
+
+	print("🎬 Cargando escena: ", str(screen))
+	var new_screen: Screen = screen_factory.get_fresh_screen(screen)
+
+	if not new_screen:
+		push_error("❌ No se pudo crear la pantalla " + str(screen))
+		return
+
+	current_screen = new_screen
+	current_screen.setup(self, data)
+
+	# Evitar conexiones duplicadas
+	if current_screen.screen_transition_requested.is_connected(switch_screen):
+		current_screen.screen_transition_requested.disconnect(switch_screen)
+
+	current_screen.screen_transition_requested.connect(switch_screen)
+	call_deferred("add_child", current_screen)
+
+	print("✅ Pantalla agregada: ", current_screen.name)

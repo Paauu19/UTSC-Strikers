@@ -2,14 +2,15 @@ extends Screen
 class_name QuizSelectionScreen
 
 # Asegúrate de que los nombres de tus botones coincidan en la escena.
-@onready var boton_quiz_project: Button = $VBoxContainer/BotonProject
-@onready var boton_quiz_soccer: Button = $VBoxContainer/BotonSoccer
-@onready var boton_quiz_test: Button = $VBoxContainer/BotonTest
-@onready var boton_back: Button = $BotonBack
+
+@onready var boton_quiz_soccer: Button = %BotonSoccer
+@onready var boton_quiz_mixed: Button = %BotonMixto
+@onready var boton_back: Button = %BotonVolver
+@onready var boton_quiz_thermowatch: Button = %BotonThermowatch
 
 func _ready() -> void:
 	# 1. Quiz sobre tu Proyecto
-	boton_quiz_project.pressed.connect(func():
+	boton_quiz_thermowatch.pressed.connect(func():
 		# Puedes pasar el tema del quiz en ScreenData si lo necesitas
 		transition_screen(SoccerGame.ScreenType.THERMOWATCH_QUIZ)
 	)
@@ -20,8 +21,8 @@ func _ready() -> void:
 	)
 	
 	# 3. Test Quiz (Usaremos ANIMALS_QUIZ o el que desees)
-	boton_quiz_test.pressed.connect(func():
-		transition_screen(SoccerGame.ScreenType.TEST_QUIZ)
+	boton_quiz_mixed.pressed.connect(func():
+		transition_screen(SoccerGame.ScreenType.MIXED_QUIZ)
 	)
 	
 	# 4. Botón de Regreso
