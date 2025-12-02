@@ -13,60 +13,52 @@
 [ext_resource type="Texture2D" uid="uid://dxdnmijtitj8" path="res://assets/ui/PNG/Yellow/Double/button_rectangle_depth_gloss.png" id="8_7jtfg"]
 [ext_resource type="Texture2D" uid="uid://dduimcfrqrmam" path="res://assets/ui/PNG/Blue/Double/button_rectangle_depth_border.png" id="9_6s8s2"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pkov7"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i4ng2"]
 texture = ExtResource("7_ya3y7")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5g5m5"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ya3y7"]
 texture = ExtResource("7_ya3y7")
 modulate_color = Color(0.42879996, 0.64, 0.58015996, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6s8s2"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7jtfg"]
 texture = ExtResource("8_7jtfg")
 modulate_color = Color(0.5092, 0.76, 0.68894, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ab711"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pkov7"]
 texture = ExtResource("5_ya3y7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5g5m5"]
+texture = ExtResource("5_ya3y7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6s8s2"]
+texture = ExtResource("5_ya3y7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ab711"]
+texture = ExtResource("6_7jtfg")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s5mit"]
 texture = ExtResource("6_7jtfg")
-modulate_color = Color(1, 1, 1, 0.89411765)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xwkaf"]
 texture = ExtResource("6_7jtfg")
-modulate_color = Color(1, 1, 1, 0.89411765)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_shxf6"]
-texture = ExtResource("6_7jtfg")
+texture = ExtResource("8_5g5m5")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j5jk3"]
-texture = ExtResource("6_7jtfg")
-modulate_color = Color(1, 1, 1, 0.89411765)
+texture = ExtResource("8_5g5m5")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2pnqi"]
-texture = ExtResource("6_7jtfg")
-modulate_color = Color(1, 1, 1, 0.85882354)
+texture = ExtResource("8_5g5m5")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cjuy7"]
-texture = ExtResource("8_5g5m5")
+texture = ExtResource("9_6s8s2")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qg110"]
-texture = ExtResource("8_5g5m5")
-modulate_color = Color(1, 1, 1, 0.89411765)
+texture = ExtResource("9_6s8s2")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lowp3"]
-texture = ExtResource("8_5g5m5")
-modulate_color = Color(1, 1, 1, 0.85882354)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gvtwv"]
 texture = ExtResource("9_6s8s2")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pbq5f"]
-texture = ExtResource("9_6s8s2")
-modulate_color = Color(1, 1, 1, 0.89411765)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kqb08"]
-texture = ExtResource("9_6s8s2")
-modulate_color = Color(1, 1, 1, 0.85882354)
 
 [node name="MixedQuiz" type="Control"]
 layout_mode = 3
@@ -79,8 +71,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 1202.0
+offset_bottom = 698.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_5lp2j")
@@ -117,8 +109,54 @@ offset_right = 414.0
 offset_bottom = 160.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("4_i4ng2")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 24
 text = "¿Cual es tu nombre?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatsFrame" type="ColorRect" parent="FondoCampo"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 80.0
+offset_top = -174.0
+offset_right = 230.0
+offset_bottom = -64.0
+grow_vertical = 2
+color = Color(0.3254902, 0.09019608, 0.85490197, 1)
+
+[node name="StatsContent" type="ColorRect" parent="FondoCampo"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 90.0
+offset_top = -164.0
+offset_right = 220.0
+offset_bottom = -74.0
+grow_vertical = 2
+
+[node name="StatsContentLabel" type="Label" parent="FondoCampo/StatsContent"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.83137256, 0, 1)
+theme_override_fonts/font = ExtResource("4_i4ng2")
+theme_override_font_sizes/font_size = 16
+text = "
+PUNTOS
+0 / 5
+Vidas
+1
+"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -134,9 +172,9 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_pkov7")
 theme_override_font_sizes/font_size = 25
 theme_override_icons/icon = ExtResource("6_i4ng2")
-theme_override_styles/normal = SubResource("StyleBoxTexture_pkov7")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_5g5m5")
-theme_override_styles/hover = SubResource("StyleBoxTexture_6s8s2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_i4ng2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ya3y7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7jtfg")
 text = "Volver a
 Menu
 "
@@ -156,11 +194,18 @@ offset_right = -56.0
 offset_bottom = -14.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxTexture_ab711")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_s5mit")
-theme_override_styles/hover = SubResource("StyleBoxTexture_xwkaf")
-text = "RESPUESTA CORRECTA
-"
+theme_override_styles/normal = SubResource("StyleBoxTexture_pkov7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5g5m5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6s8s2")
+
+[node name="ColorRect" type="ColorRect" parent="FondoCampo/BotonOpcion1"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="LabelBotonOpcion1" type="Label" parent="FondoCampo/BotonOpcion1"]
 unique_name_in_owner = true
@@ -170,9 +215,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -127.0
+offset_left = -132.0
 offset_top = -57.0
-offset_right = 123.0
+offset_right = 128.0
 offset_bottom = 43.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -198,9 +243,18 @@ offset_right = -56.0
 offset_bottom = 166.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxTexture_shxf6")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_j5jk3")
-theme_override_styles/hover = SubResource("StyleBoxTexture_2pnqi")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ab711")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_s5mit")
+theme_override_styles/hover = SubResource("StyleBoxTexture_xwkaf")
+
+[node name="ColorRect" type="ColorRect" parent="FondoCampo/BotonOpcion2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="LabelBotonOpcion2" type="Label" parent="FondoCampo/BotonOpcion2"]
 unique_name_in_owner = true
@@ -238,9 +292,18 @@ offset_right = 344.0
 offset_bottom = -14.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxTexture_cjuy7")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_qg110")
-theme_override_styles/hover = SubResource("StyleBoxTexture_lowp3")
+theme_override_styles/normal = SubResource("StyleBoxTexture_shxf6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_j5jk3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2pnqi")
+
+[node name="ColorRect" type="ColorRect" parent="FondoCampo/BotonOpcion3"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="LabelBotonOpcion3" type="Label" parent="FondoCampo/BotonOpcion3"]
 unique_name_in_owner = true
@@ -260,10 +323,10 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.17254902, 0.85490197, 0.12156863, 1)
 theme_override_constants/outline_size = 7
 theme_override_fonts/font = ExtResource("7_pkov7")
-text = "Usa el mouse para 
-darle click a las 
-respuestas y si es 
-correcta consigues 
+text = "Usa el mouse para 
+darle click a las 
+respuestas y si es 
+correcta consigues 
 un punto, "
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -282,9 +345,25 @@ offset_right = 344.0
 offset_bottom = 166.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxTexture_gvtwv")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_pbq5f")
-theme_override_styles/hover = SubResource("StyleBoxTexture_kqb08")
+theme_override_styles/normal = SubResource("StyleBoxTexture_cjuy7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qg110")
+theme_override_styles/hover = SubResource("StyleBoxTexture_lowp3")
+
+[node name="ColorRect" type="ColorRect" parent="FondoCampo/BotonOpcion4"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = -70.0
+offset_right = 135.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="LabelBotonOpcion4" type="Label" parent="FondoCampo/BotonOpcion4"]
 unique_name_in_owner = true

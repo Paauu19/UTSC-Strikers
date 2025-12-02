@@ -34,11 +34,11 @@ modulate_color = Color(0.5092, 0.76, 0.68894, 1)
 texture = ExtResource("7_7b3eh")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f4sat"]
-texture = ExtResource("8_soc8i")
+texture = ExtResource("7_7b3eh")
 modulate_color = Color(1, 1, 1, 0.89411765)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8mw32"]
-texture = ExtResource("8_soc8i")
+texture = ExtResource("7_7b3eh")
 modulate_color = Color(1, 1, 1, 0.89411765)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_icojs"]

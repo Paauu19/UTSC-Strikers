@@ -76,27 +76,7 @@ const ALL_QUIZ_DATA = {
 	{ "text": "SOCCER 17: ¿Qué país tiene más títulos de la Copa del Mundo (masculino)?", "options": ["Alemania", "Italia", "Brasil", "Argentina"], "correct": 2, "theme": "SOCCER" },
 	{ "text": "SOCCER 18: ¿Cuál es el principal rol de un Defensa Central?", "options": ["Marcar goles y asistir", "Crear juego en el mediocampo", "Proteger la portería y despejar balones", "Correr por las bandas y centrar"], "correct": 2, "theme": "SOCCER" },
 	{ "text": "SOCCER 19: ¿Qué se señala cuando el balón cruza la línea lateral completamente?", "options": ["Saque de esquina (corner)", "Saque de meta (portería)", "Saque de banda", "Falta directa"], "correct": 2, "theme": "SOCCER" },
-	{ "text": "SOCCER 20: ¿Cuántos Mundiales Femeninos ha ganado la selección de Estados Unidos?", "options": ["Dos", "Cuatro", "Tres", "Cinco"], "correct": 1, "theme": "SOCCER" },
-	{ "text": "THERMO 1: ¿Cuál es la principal función de ThermoWatch en la planta industrial?", "options": ["Controlar el inventario", "Medir la luz", "Prevenir fallas por temperatura", "Administrar usuarios"], "correct": 2, "theme": "THERMOWATCH" },
-	{ "text": "THERMO 2: ¿Qué componente electrónico se encarga de la medición de temperatura?", "options": ["Sensor PIR", "LDR", "Sensor DHT11/22", "Batería"], "correct": 2, "theme": "THERMOWATCH" },
-	{ "text": "THERMO 3: ¿Qué tecnología se usa para enviar datos a la Plataforma Web (PWA)?", "options": ["Rayos X", "Fax", "IoT (Internet of Things)", "Solo cables USB"], "correct": 2, "theme": "THERMOWATCH" },
-	{ "text": "THERMO 4: ¿Qué hace el sistema cuando detecta un sobrecalentamiento (umbral máx)?", "options": ["Apaga la máquina", "Activa una alerta visual/sonora", "Reinicia la API", "Envía un PDF"], "correct": 1, "theme": "THERMOWATCH" },
-	{ "text": "THERMO 5: ¿Qué beneficio aporta el monitoreo constante vs. la revisión manual?", "options": ["Ahorra luz", "Reduce el trabajo manual", "Permite detectar fallas en tiempo real (predictivo)", "Mejora el color de la UI"], "correct": 2, "theme": "THERMOWATCH" },
-	{ "text": "THERMO 6: ¿En qué unidad se mide la humedad relativa?", "options": ["Grados Celsius", "Kilogramos", "Porcentaje (%)", "Pascal"], "correct": 2, "theme": "THERMOWATCH" },
-	{ "text": "THERMO 7: ¿Qué microcontrolador es el 'cerebro' del sistema IoT?", "options": ["Intel Core i9", "Raspberry Pi", "Arduino / ESP32", "Calculadora"], "correct": 2, "theme": "THERMOWATCH" },
-	{ "text": "THERMO 8: PWA-07: ¿Quién quiere establecer los umbrales de temperatura (mín/máx)?", "options": ["El Operador", "El Arduino", "El Administrador", "El desarrollador"], "correct": 2, "theme": "THERMOWATCH" },
-	{ "text": "THERMO 9: ¿Qué significa la sigla 'PWA' en el contexto del proyecto?", "options": ["Public Web Access", "Portable Web App", "Progressive Web Application", "Personal Website Assistant"], "correct": 2, "theme": "THERMOWATCH" },
-	{ "text": "THERMO 10: PWA-08: ¿Qué tipo de notificación se espera recibir en el móvil?", "options": ["Email semanal", "Notificaciones Push/visuales", "Mensaje de texto", "Llamada telefónica"], "correct": 1, "theme": "THERMOWATCH" },
-	{ "text": "THERMO 11: PWA-04: ¿Cuál es el propósito del 'Panel de Inventario de Maquinaria'?", "options": ["Ver las fallas", "CRUD para catalogar maquinaria", "Ver el mapa de la planta", "Exportar reportes"], "correct": 1, "theme": "THERMOWATCH" },
-	{ "text": "THERMO 12: PWA-02: ¿Qué componente es responsable de recibir y almacenar los datos del Arduino?", "options": ["El sensor DHT", "La base de datos", "La API (Backend)", "El Dashboard"], "correct": 2, "theme": "THERMOWATCH" },
-	{ "text": "THERMO 13: ¿Cuál es el riesgo principal si la humedad ambiental es demasiado alta?", "options": ["Aumento de temperatura", "Corrosión de equipos metálicos", "Fallas en el software", "Apagón general"], "correct": 1, "theme": "THERMOWATCH" },
-	{ "text": "THERMO 14: PWA-09: ¿Qué se espera ver en el 'Dashboard de Métricas e Historial'?", "options": ["Fotos de la planta", "Videojuegos", "Historial de temperaturas y promedios", "Comentarios de operadores"], "correct": 2, "theme": "THERMOWATCH" },
-	{ "text": "THERMO 15: ¿Qué significa 'Mantenimiento Predictivo'?", "options": ["Arreglar algo cuando se rompe", "Reemplazar partes anualmente", "Usar datos para predecir fallas", "Limpiar la máquina"], "correct": 2, "theme": "THERMOWATCH" },
-	{ "text": "THERMO 16: ¿Cuál es el rol de un 'Operador' en el sistema ThermoWatch?", "options": ["Programar el Arduino", "Establecer umbrales", "Recibir alertas en tiempo real", "Diseñar la interfaz"], "correct": 2, "theme": "THERMOWATCH" },
-	{ "text": "THERMO 17: PWA-10: ¿Qué se usaría para la 'Ubicación de Maquinaria' si no hay GPS?", "options": ["Un mapa de Google", "Un plano estático de la planta", "Un selfie", "Un diagrama de flujo"], "correct": 1, "theme": "THERMOWATCH" },
-	{ "text": "THERMO 18: ¿Qué método utiliza el PWA para obtener los datos más recientes?", "options": ["Polling (consultar datos repetidamente)", "Llamada telefónica", "Correo electrónico", "Descarga FTP"], "correct": 0, "theme": "THERMOWATCH" },
-	{ "text": "THERMO 19: PWA-11: ¿Qué formato se solicita para la 'Exportación de Reportes'?", "options": ["JPG o PNG", "GDScript", "CSV/PDF", "EXE"], "correct": 2, "theme": "THERMOWATCH" },
-	{ "text": "THERMO 20: El proyecto ThermoWatch está enfocado en qué tipo de industria:", "options": ["Entretenimiento", "Moda", "Planta Industrial/Manufactura", "Educación"], "correct": 2, "theme": "THERMOWATCH" }
+	{ "text": "SOCCER 20: ¿Cuántos Mundiales Femeninos ha ganado la selección de Estados Unidos?", "options": ["Dos", "Cuatro", "Tres", "Cinco"], "correct": 1, "theme": "SOCCER" }
 	],
 }
 
@@ -108,6 +88,17 @@ const ALL_QUIZ_DATA = {
 	$FondoCampo/BotonOpcion3,
 	$FondoCampo/BotonOpcion4
 ]
+
+# CORRECCIÓN CLAVE: Usamos la notación de nombre único (%) para los Labels.
+# Esto asume que los Labels hijos de los botones tienen los nombres únicos: 
+# LabelBotonOpcion1, LabelBotonOpcion2, etc., en todas las escenas.
+@onready var option_labels: Array[Label] = [
+	%LabelBotonOpcion1,
+	%LabelBotonOpcion3,
+	%LabelBotonOpcion2,
+	%LabelBotonOpcion4
+]
+
 @onready var hearts_ui: Array[TextureRect] = [
 	$FondoCampo/HeartsContainer/HeartTextureRect,
 	$FondoCampo/HeartsContainer/HeartTextureRect2,
@@ -141,7 +132,7 @@ func get_quiz_key() -> String:
 		"soccer": return "SOCCER_QUIZ"
 		"mixed": return "MIXED_QUIZ"
 		"thermowatch": return "THERMOWATCH_QUIZ"
-		_: 
+		_:
 			push_error("Modo de quiz desconocido: %s" % quiz_mode)
 			return "MIXED_QUIZ"
 
@@ -181,6 +172,9 @@ func _shuffle_options() -> void:
 
 # --- READY ---
 func _ready() -> void:
+	# No necesitamos una comprobación de error personalizada aquí, 
+	# ya que si los nodos no se encuentran, serán null y GDScript lo manejará.
+
 	if is_instance_valid(boton_volver_menu):
 		boton_volver_menu.pressed.connect(func():
 			transition_screen(SoccerGame.ScreenType.MAIN_MENU)
@@ -206,8 +200,13 @@ func start_round() -> void:
 
 	for i in range(option_buttons.size()):
 		var btn = option_buttons[i]
-		if i < q["options"].size():
-			btn.text = q["options"][i]
+		var lbl = option_labels[i] # Usamos el Label referenciado
+
+		if is_instance_valid(lbl) and i < q["options"].size(): # Comprobamos si el Label es válido
+			lbl.text = q["options"][i] # <--- CORRECCIÓN CLAVE: Usar el Label para el texto
+			
+			# Reiniciamos colores y habilitamos
+			lbl.remove_theme_color_override("font_color")
 			btn.disabled = false
 			btn.modulate = Color(1,1,1)
 			btn.visible = true
@@ -235,7 +234,10 @@ func on_answer_submitted(selected_index: int) -> void:
 func handle_correct_answer(index: int) -> void:
 	score += POINTS_PER_CORRECT_ANSWER
 	question_answered_correctly = true
-	option_buttons[index].add_theme_color_override("font_color", Color(0,1,0))
+	
+	if is_instance_valid(option_labels[index]): # Comprobación de seguridad
+		option_labels[index].add_theme_color_override("font_color", Color(0,1,0))
+	
 	current_round += 1
 	get_tree().create_timer(1.5).timeout.connect(start_round)
 
@@ -243,10 +245,13 @@ func handle_correct_answer(index: int) -> void:
 func handle_incorrect_answer(selected_index: int, correct_index: int) -> void:
 	lives = max(0.0, lives - 0.5)
 	update_hearts_display()
-
-	option_buttons[selected_index].add_theme_color_override("font_color", Color(1,0,0))
-	option_buttons[correct_index].add_theme_color_override("font_color", Color(0,1,0))
-
+	
+	# Aplicar colores al Label (con comprobación de seguridad)
+	if is_instance_valid(option_labels[selected_index]):
+		option_labels[selected_index].add_theme_color_override("font_color", Color(1,0,0))
+	if is_instance_valid(option_labels[correct_index]):
+		option_labels[correct_index].add_theme_color_override("font_color", Color(0,1,0))
+	
 	if lives <= 0:
 		is_game_over = true
 		get_tree().create_timer(2.5).timeout.connect(func():
@@ -254,9 +259,15 @@ func handle_incorrect_answer(selected_index: int, correct_index: int) -> void:
 		)
 	else:
 		get_tree().create_timer(1.5).timeout.connect(func():
-			for btn in option_buttons:
-				btn.disabled = false
-				btn.modulate = Color(1,1,1)
+			for i in range(option_buttons.size()):
+				var btn = option_buttons[i]
+				var lbl = option_labels[i]
+				
+				if is_instance_valid(lbl):
+					# Reiniciar colores y habilitar
+					lbl.remove_theme_color_override("font_color")
+					btn.disabled = false
+					btn.modulate = Color(1,1,1)
 			is_waiting_for_answer = true
 		)
 

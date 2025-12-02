@@ -6,8 +6,8 @@
 [ext_resource type="FontFile" uid="uid://cyur175ibhsdw" path="res://assets/ui/Font/Kenney Future.ttf" id="4_ijll7"]
 [ext_resource type="Texture2D" uid="uid://casi87puk8q1j" path="res://assets/ui/PNG/Blue/Double/icon_cross.png" id="5_xgaqf"]
 [ext_resource type="Texture2D" uid="uid://cmwlhtoojgpri" path="res://assets/ui/PNG/Blue/Double/button_rectangle_depth_gloss.png" id="6_30y4o"]
-[ext_resource type="Texture2D" uid="uid://dduimcfrqrmam" path="res://assets/ui/PNG/Blue/Double/button_rectangle_depth_border.png" id="7_yivab"]
 [ext_resource type="Texture2D" uid="uid://bsorn87y7eek" path="res://assets/ui/PNG/Blue/Double/button_rectangle_border.png" id="8_ghnub"]
+[ext_resource type="Texture2D" uid="uid://d3rdf7sk3fx0c" path="res://assets/ui/PNG/Blue/Double/button_round_depth_border.png" id="9_fy4l7"]
 [ext_resource type="FontFile" uid="uid://c45dcu5gt2sf4" path="res://assets/ui/Font/Kenney Future Narrow.ttf" id="9_qdelb"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lfv1c"]
@@ -28,14 +28,14 @@ texture = ExtResource("6_30y4o")
 modulate_color = Color(0.5092, 0.76, 0.68894, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tlnvx"]
-texture = ExtResource("7_yivab")
+texture = ExtResource("9_fy4l7")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hu3nq"]
-texture = ExtResource("7_yivab")
+texture = ExtResource("9_fy4l7")
 modulate_color = Color(1, 1, 1, 0.89411765)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hfoik"]
-texture = ExtResource("7_yivab")
+texture = ExtResource("9_fy4l7")
 modulate_color = Color(1, 1, 1, 0.85882354)
 
 [node name="about" type="Control"]
@@ -85,6 +85,43 @@ label_settings = SubResource("LabelSettings_lfv1c")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="TextureRect" type="TextureRect" parent="FondoCampo"]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 124.0
+offset_right = 1003.0
+offset_bottom = 533.0
+texture = ExtResource("8_ghnub")
+
+[node name="Label" type="Label" parent="FondoCampo/TextureRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -406.0
+offset_top = 38.0
+offset_right = 409.0
+offset_bottom = 375.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0.627451, 1)
+theme_override_fonts/font = ExtResource("9_qdelb")
+theme_override_font_sizes/font_size = 18
+text = "Descripcion: Juego de futbol basado en el mundial 2025 para 
+revision,siendo complementario de ThermoWatch,
+mi Proyecto integrador sobre el control de temperatura de 
+maquinaria de plantas industriales
+
+Alumno: Danna Paola Coronado Perez 21002.
+
+Materia: Optativa de Desarrollo de videojuegos.
+
+Maestra: Consuelo Elizabeth de leon gonzalez.
+
+Link del proyecto: 
+https://github.com/Paauu19/UTSC-Strikers"
+vertical_alignment = 1
+
 [node name="BotonVolver" type="Button" parent="FondoCampo"]
 custom_minimum_size = Vector2(180, 100)
 layout_mode = 0
@@ -104,60 +141,36 @@ Menu
 "
 icon_alignment = 1
 
-[node name="BotonOpcion4" type="Button" parent="FondoCampo"]
-custom_minimum_size = Vector2(270, 140)
+[node name="BotonDescarga" type="Button" parent="FondoCampo"]
+custom_minimum_size = Vector2(200, 140)
 layout_mode = 0
-offset_left = 652.0
-offset_top = 379.0
-offset_right = 922.0
-offset_bottom = 519.0
+offset_left = 768.0
+offset_top = 339.0
+offset_right = 968.0
+offset_bottom = 489.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_tlnvx")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_hu3nq")
 theme_override_styles/hover = SubResource("StyleBoxTexture_hfoik")
 
-[node name="Label" type="Label" parent="FondoCampo/BotonOpcion4"]
+[node name="Label" type="Label" parent="FondoCampo/BotonDescarga"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -127.0
-offset_top = -57.0
-offset_right = 123.0
-offset_bottom = 43.0
+offset_left = -124.0
+offset_top = -54.0
+offset_right = 126.0
+offset_bottom = 46.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.17254902, 0.6627451, 0.9098039, 1)
 theme_override_constants/outline_size = 7
 theme_override_fonts/font = ExtResource("4_ijll7")
-text = "RESPUESTA CORRECTA"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="TextureRect" type="TextureRect" parent="FondoCampo"]
-layout_mode = 0
-offset_left = 131.0
-offset_top = 124.0
-offset_right = 1003.0
-offset_bottom = 533.0
-texture = ExtResource("8_ghnub")
-
-[node name="Label" type="Label" parent="FondoCampo/TextureRect"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -408.0
-offset_top = 32.0
-offset_right = 407.0
-offset_bottom = 369.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0.627451, 1)
-theme_override_fonts/font = ExtResource("9_qdelb")
-theme_override_font_sizes/font_size = 16
-text = "¿Cual es tu nombre?"
+text = "CLONA 
+REPOSITORIO
+AQUI!!!"
 horizontal_alignment = 1
 vertical_alignment = 1

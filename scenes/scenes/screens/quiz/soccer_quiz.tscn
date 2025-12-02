@@ -28,45 +28,37 @@ modulate_color = Color(0.5092, 0.76, 0.68894, 1)
 texture = ExtResource("5_pafqb")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yh058"]
-texture = ExtResource("6_kwftb")
-modulate_color = Color(1, 1, 1, 0.89411765)
+texture = ExtResource("5_pafqb")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xam12"]
-texture = ExtResource("6_kwftb")
-modulate_color = Color(1, 1, 1, 0.89411765)
+texture = ExtResource("5_pafqb")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vgmlr"]
 texture = ExtResource("6_kwftb")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tbsr8"]
 texture = ExtResource("6_kwftb")
-modulate_color = Color(1, 1, 1, 0.89411765)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0rjqw"]
 texture = ExtResource("6_kwftb")
-modulate_color = Color(1, 1, 1, 0.85882354)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h7ile"]
 texture = ExtResource("8_yh058")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3pf64"]
 texture = ExtResource("8_yh058")
-modulate_color = Color(1, 1, 1, 0.89411765)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7dsxl"]
 texture = ExtResource("8_yh058")
-modulate_color = Color(1, 1, 1, 0.85882354)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_frtby"]
 texture = ExtResource("9_xam12")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pafqb"]
 texture = ExtResource("9_xam12")
-modulate_color = Color(1, 1, 1, 0.89411765)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kwftb"]
 texture = ExtResource("9_xam12")
-modulate_color = Color(1, 1, 1, 0.85882354)
 
 [node name="SoccerQuiz" type="Control"]
 layout_mode = 3
@@ -79,8 +71,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 1202.0
+offset_bottom = 698.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_3pf64")
@@ -117,8 +109,54 @@ offset_right = 414.0
 offset_bottom = 160.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("4_frtby")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 24
 text = "¿Cual es tu nombre?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatsFrame" type="ColorRect" parent="FondoCampo"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 80.0
+offset_top = -174.0
+offset_right = 230.0
+offset_bottom = -64.0
+grow_vertical = 2
+color = Color(0.3254902, 0.09019608, 0.85490197, 1)
+
+[node name="StatsContent" type="ColorRect" parent="FondoCampo"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 90.0
+offset_top = -164.0
+offset_right = 220.0
+offset_bottom = -74.0
+grow_vertical = 2
+
+[node name="StatsContentLabel" type="Label" parent="FondoCampo/StatsContent"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0.83137256, 0, 1)
+theme_override_fonts/font = ExtResource("4_frtby")
+theme_override_font_sizes/font_size = 16
+text = "
+PUNTOS
+0 / 5
+Vidas
+1
+"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -159,8 +197,15 @@ grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_kb8pe")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_yh058")
 theme_override_styles/hover = SubResource("StyleBoxTexture_xam12")
-text = "RESPUESTA CORRECTA
-"
+
+[node name="ColorRect" type="ColorRect" parent="FondoCampo/BotonOpcion1"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="LabelBotonOpcion1" type="Label" parent="FondoCampo/BotonOpcion1"]
 unique_name_in_owner = true
@@ -170,9 +215,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -127.0
+offset_left = -132.0
 offset_top = -57.0
-offset_right = 123.0
+offset_right = 128.0
 offset_bottom = 43.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -201,6 +246,15 @@ grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_vgmlr")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_tbsr8")
 theme_override_styles/hover = SubResource("StyleBoxTexture_0rjqw")
+
+[node name="ColorRect" type="ColorRect" parent="FondoCampo/BotonOpcion2"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="LabelBotonOpcion2" type="Label" parent="FondoCampo/BotonOpcion2"]
 unique_name_in_owner = true
@@ -242,6 +296,15 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_h7ile")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_3pf64")
 theme_override_styles/hover = SubResource("StyleBoxTexture_7dsxl")
 
+[node name="ColorRect" type="ColorRect" parent="FondoCampo/BotonOpcion3"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="LabelBotonOpcion3" type="Label" parent="FondoCampo/BotonOpcion3"]
 unique_name_in_owner = true
 layout_mode = 1
@@ -260,10 +323,10 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.17254902, 0.85490197, 0.12156863, 1)
 theme_override_constants/outline_size = 7
 theme_override_fonts/font = ExtResource("7_kb8pe")
-text = "Usa el mouse para 
-darle click a las 
-respuestas y si es 
-correcta consigues 
+text = "Usa el mouse para 
+darle click a las 
+respuestas y si es 
+correcta consigues 
 un punto, "
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -285,6 +348,22 @@ grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_frtby")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_pafqb")
 theme_override_styles/hover = SubResource("StyleBoxTexture_kwftb")
+
+[node name="ColorRect" type="ColorRect" parent="FondoCampo/BotonOpcion4"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = -70.0
+offset_right = 135.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="LabelBotonOpcion4" type="Label" parent="FondoCampo/BotonOpcion4"]
 unique_name_in_owner = true
