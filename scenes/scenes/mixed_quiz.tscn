@@ -1,6 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://cw1n5wup2wmfl"]
+[gd_scene load_steps=22 format=3 uid="uid://cw1n5wup2wmfl"]
 
 [ext_resource type="Texture2D" uid="uid://dtlrjqth456l0" path="res://assets/ui/PNG/Quiz/quiz_board_background.png" id="1_3bq4j"]
+[ext_resource type="Script" uid="uid://bqvvlb1doikmc" path="res://scenes/scenes/screens/quiz/mixed_quiz.gd" id="1_xpsj4"]
 [ext_resource type="Texture2D" uid="uid://cv6qg2edbslxi" path="res://assets/ui/PNG/Quiz/heart_full.tres" id="2_xpsj4"]
 [ext_resource type="FontFile" uid="uid://c45dcu5gt2sf4" path="res://assets/ui/Font/Kenney Future Narrow.ttf" id="3_igpet"]
 [ext_resource type="Texture2D" uid="uid://dyt1hi6wm3yl1" path="res://assets/ui/PNG/Red/Double/button_rectangle_depth_border.png" id="4_ntbvi"]
@@ -53,13 +54,19 @@ modulate_color = Color(1, 1, 1, 0.89411765)
 texture = ExtResource("8_cfvaq")
 modulate_color = Color(1, 1, 1, 0.85882354)
 
-[node name="MixedQuiz" type="Node"]
+[node name="MixedQuiz" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xpsj4")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(400, 350)
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 1152.0
+offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_3bq4j")

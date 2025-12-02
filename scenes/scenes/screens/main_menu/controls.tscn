@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cb1ea2vp8yxrv"]
+[gd_scene load_steps=29 format=3 uid="uid://cb1ea2vp8yxrv"]
 
 [ext_resource type="Script" uid="uid://dej64ivwnr5hj" path="res://scenes/scenes/controls.gd" id="1_8fxss"]
 [ext_resource type="Texture2D" uid="uid://ser5lxxkvyfl" path="res://assets/ui/PNG/Quiz/quiz_background.png" id="2_j44k0"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c8fk47l4bwo86" path="res://assets/ui/PNG/Green/Double/button_rectangle_depth_border.png" id="9_gxmg1"]
 [ext_resource type="Texture2D" uid="uid://dduimcfrqrmam" path="res://assets/ui/PNG/Blue/Double/button_rectangle_depth_border.png" id="10_t8rdj"]
 [ext_resource type="FontFile" uid="uid://c45dcu5gt2sf4" path="res://assets/ui/Font/Kenney Future Narrow.ttf" id="11_psag0"]
+[ext_resource type="Texture2D" uid="uid://cv6qg2edbslxi" path="res://assets/ui/PNG/Quiz/heart_full.tres" id="12_j44k0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_icojs"]
 font = ExtResource("4_8vi0k")
@@ -128,6 +129,7 @@ offset_top = 523.0
 offset_right = 678.0
 offset_bottom = 623.0
 size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_8vi0k")
 theme_override_font_sizes/font_size = 25
 theme_override_icons/icon = ExtResource("5_5reou")
@@ -152,7 +154,8 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_8mw32")
 text = "RESPUESTA CORRECTA
 "
 
-[node name="Label" type="Label" parent="FondoCampo/BotonOpcion1"]
+[node name="LabelBotonOpcion1" type="Label" parent="FondoCampo/BotonOpcion1"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -184,7 +187,8 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_icojs")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_2krs8")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qc13f")
 
-[node name="Label" type="Label" parent="FondoCampo/BotonOpcion2"]
+[node name="LabelBotonOpcion2" type="Label" parent="FondoCampo/BotonOpcion2"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -216,7 +220,8 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_l7m3e")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_7cfrk")
 theme_override_styles/hover = SubResource("StyleBoxTexture_1tb8j")
 
-[node name="Label" type="Label" parent="FondoCampo/BotonOpcion3"]
+[node name="LabelBotonOpcion3" type="Label" parent="FondoCampo/BotonOpcion3"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -252,7 +257,8 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_6rb2i")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_cf8gx")
 theme_override_styles/hover = SubResource("StyleBoxTexture_bdxkg")
 
-[node name="Label" type="Label" parent="FondoCampo/BotonOpcion4"]
+[node name="LabelBotonOpcion4" type="Label" parent="FondoCampo/BotonOpcion4"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -292,3 +298,23 @@ theme_override_font_sizes/font_size = 16
 text = "Tu respuesta fue...: "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="HeartsContainer" type="HBoxContainer" parent="FondoCampo"]
+layout_mode = 1
+offset_left = 15.0
+offset_top = 120.0
+offset_right = 548.0
+offset_bottom = 300.0
+scale = Vector2(0.5, 0.5)
+
+[node name="HeartTextureRect" type="TextureRect" parent="FondoCampo/HeartsContainer"]
+layout_mode = 2
+texture = ExtResource("12_j44k0")
+
+[node name="HeartTextureRect2" type="TextureRect" parent="FondoCampo/HeartsContainer"]
+layout_mode = 2
+texture = ExtResource("12_j44k0")
+
+[node name="HeartTextureRect3" type="TextureRect" parent="FondoCampo/HeartsContainer"]
+layout_mode = 2
+texture = ExtResource("12_j44k0")

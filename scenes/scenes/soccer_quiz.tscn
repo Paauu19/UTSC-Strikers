@@ -1,6 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://bfjh7qpfa320t"]
+[gd_scene load_steps=22 format=3 uid="uid://bfjh7qpfa320t"]
 
 [ext_resource type="Texture2D" uid="uid://dtlrjqth456l0" path="res://assets/ui/PNG/Quiz/quiz_board_background.png" id="1_8pfwv"]
+[ext_resource type="Script" uid="uid://b2ekj30fm4yw2" path="res://scenes/scenes/screens/quiz/soccer_quiz.gd" id="1_cog54"]
 [ext_resource type="Texture2D" uid="uid://cv6qg2edbslxi" path="res://assets/ui/PNG/Quiz/heart_full.tres" id="2_cog54"]
 [ext_resource type="FontFile" uid="uid://c45dcu5gt2sf4" path="res://assets/ui/Font/Kenney Future Narrow.ttf" id="3_uyejr"]
 [ext_resource type="Texture2D" uid="uid://dyt1hi6wm3yl1" path="res://assets/ui/PNG/Red/Double/button_rectangle_depth_border.png" id="4_rhgme"]
@@ -53,13 +54,19 @@ modulate_color = Color(1, 1, 1, 0.89411765)
 texture = ExtResource("8_hyk8q")
 modulate_color = Color(1, 1, 1, 0.85882354)
 
-[node name="SoccerQuiz" type="Node"]
+[node name="SoccerQuiz" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_cog54")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(400, 350)
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 1152.0
+offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_8pfwv")
