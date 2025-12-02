@@ -1,6 +1,6 @@
 [gd_scene load_steps=29 format=3 uid="uid://cb1ea2vp8yxrv"]
 
-[ext_resource type="Script" uid="uid://dej64ivwnr5hj" path="res://scenes/scenes/controls.gd" id="1_8fxss"]
+[ext_resource type="Script" uid="uid://dej64ivwnr5hj" path="res://scenes/scripts/controls.gd" id="1_8fxss"]
 [ext_resource type="Texture2D" uid="uid://ser5lxxkvyfl" path="res://assets/ui/PNG/Quiz/quiz_background.png" id="2_j44k0"]
 [ext_resource type="Texture2D" uid="uid://xgdxjot3dacc" path="res://assets/ui/PNG/Yellow/Double/button_rectangle_depth_gradient.png" id="3_6mhnr"]
 [ext_resource type="FontFile" uid="uid://cyur175ibhsdw" path="res://assets/ui/Font/Kenney Future.ttf" id="4_8vi0k"]

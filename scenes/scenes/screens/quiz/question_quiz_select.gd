@@ -1,31 +1,50 @@
 extends Screen
 class_name QuizNumberSelectionScreen
 
-# Asegúrate de que los nombres de tus botones coincidan en la escena.
+@onready var boton_5: Button = %Boton5P
+@onready var boton_10: Button = %Boton10P
+@onready var boton_all: Button = %BotonTP
+@onready var boton_back: Button = %BotonVolverSelect
 
-@onready var boton_quiz_soccer: Button = %BotonSoccer
-@onready var boton_quiz_mixed: Button = %BotonMixto
-@onready var boton_back: Button = %BotonVolver
-@onready var boton_quiz_thermowatch: Button = %BotonThermowatch
+func setup(game: SoccerGame, data: ScreenData) -> void:
+	super.setup(game, data)
+	# Ya no hace falta asignar manualmente; Screen ya tiene screen_data
 
 func _ready() -> void:
-	# 1. Quiz sobre tu Proyecto
-	boton_quiz_thermowatch.pressed.connect(func():
-		# Puedes pasar el tema del quiz en ScreenData si lo necesitas
-		transition_screen(SoccerGame.ScreenType.THERMOWATCH_QUIZ)
+	boton_5.pressed.connect(func():
+		_start_quiz(5)
 	)
-	
-	# 2. Quiz sobre el Mundial 2025
-	boton_quiz_soccer.pressed.connect(func():
-		transition_screen(SoccerGame.ScreenType.SOCCER_QUIZ)
+
+	boton_10.pressed.connect(func():
+		_start_quiz(10)
 	)
-	
-	# 3. Test Quiz (Usaremos ANIMALS_QUIZ o el que desees)
-	boton_quiz_mixed.pressed.connect(func():
-		transition_screen(SoccerGame.ScreenType.MIXED_QUIZ)
+
+	boton_all.pressed.connect(func():
+		_start_quiz(-1)
 	)
-	
-	# 4. Botón de Regreso
+
 	boton_back.pressed.connect(func():
-		transition_screen(SoccerGame.ScreenType.MAIN_MENU)
+		transition_screen(SoccerGame.ScreenType.QUIZ_MODE_SELECTION)
 	)
+
+func _start_quiz(question_count: int) -> void:
+	if screen_data == null:
+		push_error("❌ No se recibió ScreenData desde la pantalla anterior.")
+		return
+
+	screen_data.set_question_count(question_count)
+
+	match screen_data.quiz_mode:
+		"soccer":
+			transition_screen(SoccerGame.ScreenType.SOCCER_QUIZ, screen_data)
+			print("📊 Modo seleccionado:", screen_data.quiz_mode, " | Preguntas:", question_count)
+		"mixed":
+			transition_screen(SoccerGame.ScreenType.MIXED_QUIZ, screen_data)
+			print("📊 Modo seleccionado:", screen_data.quiz_mode, " | Preguntas:", question_count)
+
+		"thermowatch":
+			transition_screen(SoccerGame.ScreenType.THERMOWATCH_QUIZ, screen_data)
+			print("📊 Modo seleccionado:", screen_data.quiz_mode, " | Preguntas:", question_count)
+
+		_:
+			push_warning("⚠️ Modo desconocido: " + str(screen_data.quiz_mode))

@@ -1,47 +1,47 @@
 [gd_scene load_steps=17 format=3 uid="uid://sxjchphwf78u"]
 
-[ext_resource type="Script" uid="uid://dnafnjic1kalb" path="res://scenes/scenes/about.gd" id="1_b26a2"]
-[ext_resource type="Texture2D" uid="uid://ser5lxxkvyfl" path="res://assets/ui/PNG/Quiz/quiz_background.png" id="1_mcjkt"]
-[ext_resource type="Texture2D" uid="uid://bkm0e7ymcakc1" path="res://assets/ui/PNG/Blue/Double/button_rectangle_depth_gradient.png" id="2_l0cra"]
-[ext_resource type="FontFile" uid="uid://cyur175ibhsdw" path="res://assets/ui/Font/Kenney Future.ttf" id="3_yhja8"]
-[ext_resource type="Texture2D" uid="uid://casi87puk8q1j" path="res://assets/ui/PNG/Blue/Double/icon_cross.png" id="4_b26a2"]
-[ext_resource type="Texture2D" uid="uid://cmwlhtoojgpri" path="res://assets/ui/PNG/Blue/Double/button_rectangle_depth_gloss.png" id="5_6rgit"]
-[ext_resource type="Texture2D" uid="uid://bsorn87y7eek" path="res://assets/ui/PNG/Blue/Double/button_rectangle_border.png" id="7_mcjkt"]
-[ext_resource type="Texture2D" uid="uid://dduimcfrqrmam" path="res://assets/ui/PNG/Blue/Double/button_rectangle_depth_border.png" id="10_2t11x"]
-[ext_resource type="FontFile" uid="uid://c45dcu5gt2sf4" path="res://assets/ui/Font/Kenney Future Narrow.ttf" id="11_6rci2"]
+[ext_resource type="Script" uid="uid://dnafnjic1kalb" path="res://scenes/scripts/about.gd" id="1_6afha"]
+[ext_resource type="Texture2D" uid="uid://ser5lxxkvyfl" path="res://assets/ui/PNG/Quiz/quiz_background.png" id="2_fy4l7"]
+[ext_resource type="Texture2D" uid="uid://bkm0e7ymcakc1" path="res://assets/ui/PNG/Blue/Double/button_rectangle_depth_gradient.png" id="3_2uifb"]
+[ext_resource type="FontFile" uid="uid://cyur175ibhsdw" path="res://assets/ui/Font/Kenney Future.ttf" id="4_ijll7"]
+[ext_resource type="Texture2D" uid="uid://casi87puk8q1j" path="res://assets/ui/PNG/Blue/Double/icon_cross.png" id="5_xgaqf"]
+[ext_resource type="Texture2D" uid="uid://cmwlhtoojgpri" path="res://assets/ui/PNG/Blue/Double/button_rectangle_depth_gloss.png" id="6_30y4o"]
+[ext_resource type="Texture2D" uid="uid://dduimcfrqrmam" path="res://assets/ui/PNG/Blue/Double/button_rectangle_depth_border.png" id="7_yivab"]
+[ext_resource type="Texture2D" uid="uid://bsorn87y7eek" path="res://assets/ui/PNG/Blue/Double/button_rectangle_border.png" id="8_ghnub"]
+[ext_resource type="FontFile" uid="uid://c45dcu5gt2sf4" path="res://assets/ui/Font/Kenney Future Narrow.ttf" id="9_qdelb"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lfv1c"]
-font = ExtResource("3_yhja8")
+font = ExtResource("4_ijll7")
 font_size = 70
 outline_size = 15
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rtp3u"]
-texture = ExtResource("2_l0cra")
+texture = ExtResource("3_2uifb")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y2tuk"]
-texture = ExtResource("2_l0cra")
+texture = ExtResource("3_2uifb")
 modulate_color = Color(0.42879996, 0.64, 0.58015996, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wyhps"]
-texture = ExtResource("5_6rgit")
+texture = ExtResource("6_30y4o")
 modulate_color = Color(0.5092, 0.76, 0.68894, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tlnvx"]
-texture = ExtResource("10_2t11x")
+texture = ExtResource("7_yivab")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hu3nq"]
-texture = ExtResource("10_2t11x")
+texture = ExtResource("7_yivab")
 modulate_color = Color(1, 1, 1, 0.89411765)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hfoik"]
-texture = ExtResource("10_2t11x")
+texture = ExtResource("7_yivab")
 modulate_color = Color(1, 1, 1, 0.85882354)
 
 [node name="about" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_b26a2")
+script = ExtResource("1_6afha")
 
 [node name="FondoCampo" type="TextureRect" parent="."]
 layout_mode = 1
@@ -52,7 +52,7 @@ offset_right = 1152.0
 offset_bottom = 648.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_mcjkt")
+texture = ExtResource("2_fy4l7")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="FondoCampo"]
 custom_minimum_size = Vector2(0, 10)
@@ -70,7 +70,7 @@ alignment = 1
 [node name="Titulo" type="NinePatchRect" parent="FondoCampo/VBoxContainer"]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
-texture = ExtResource("2_l0cra")
+texture = ExtResource("3_2uifb")
 patch_margin_left = 31
 patch_margin_top = 15
 patch_margin_right = 15
@@ -93,9 +93,9 @@ offset_top = 534.0
 offset_right = 683.0
 offset_bottom = 634.0
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("3_yhja8")
+theme_override_fonts/font = ExtResource("4_ijll7")
 theme_override_font_sizes/font_size = 25
-theme_override_icons/icon = ExtResource("4_b26a2")
+theme_override_icons/icon = ExtResource("5_xgaqf")
 theme_override_styles/normal = SubResource("StyleBoxTexture_rtp3u")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_y2tuk")
 theme_override_styles/hover = SubResource("StyleBoxTexture_wyhps")
@@ -131,7 +131,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.17254902, 0.6627451, 0.9098039, 1)
 theme_override_constants/outline_size = 7
-theme_override_fonts/font = ExtResource("3_yhja8")
+theme_override_fonts/font = ExtResource("4_ijll7")
 text = "RESPUESTA CORRECTA"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -142,7 +142,7 @@ offset_left = 131.0
 offset_top = 124.0
 offset_right = 1003.0
 offset_bottom = 533.0
-texture = ExtResource("7_mcjkt")
+texture = ExtResource("8_ghnub")
 
 [node name="Label" type="Label" parent="FondoCampo/TextureRect"]
 layout_mode = 1
@@ -156,7 +156,7 @@ offset_bottom = 369.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0.627451, 1)
-theme_override_fonts/font = ExtResource("11_6rci2")
+theme_override_fonts/font = ExtResource("9_qdelb")
 theme_override_font_sizes/font_size = 16
 text = "¿Cual es tu nombre?"
 horizontal_alignment = 1

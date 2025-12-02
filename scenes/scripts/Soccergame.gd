@@ -4,6 +4,7 @@ class_name SoccerGame
 enum ScreenType {
 	MAIN_MENU,
 	QUIZ_MODE_SELECTION,
+	QUIZ_NUMBER_SELECTION,
 	CONTROLS,
 	ABOUT,
 	TEST_QUIZ,

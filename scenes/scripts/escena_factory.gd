@@ -6,9 +6,10 @@ var screens := {
 	SoccerGame.ScreenType.CONTROLS: preload("res://scenes/scenes/screens/main_menu/controls.tscn"),
 	SoccerGame.ScreenType.ABOUT: preload("res://scenes/scenes/screens/main_menu/about.tscn"),
 	SoccerGame.ScreenType.QUIZ_MODE_SELECTION: preload("res://scenes/scenes/screens/main_menu/modo_quiz_select.tscn"),
-	SoccerGame.ScreenType.THERMOWATCH_QUIZ: preload("res://scenes/scenes/thermowatch_quiz.tscn"),
-	SoccerGame.ScreenType.SOCCER_QUIZ: preload("res://scenes/scenes/soccer_quiz.tscn"),
-	SoccerGame.ScreenType.MIXED_QUIZ: preload("res://scenes/scenes/mixed_quiz.tscn"),
+	SoccerGame.ScreenType.QUIZ_NUMBER_SELECTION: preload("res://scenes/scenes/screens/main_menu/question_quiz_select.tscn"),
+	SoccerGame.ScreenType.THERMOWATCH_QUIZ: preload("res://scenes/scenes/screens/quiz/thermowatch_quiz.tscn"),
+	SoccerGame.ScreenType.SOCCER_QUIZ: preload("res://scenes/scenes/screens/quiz/soccer_quiz.tscn"),
+	SoccerGame.ScreenType.MIXED_QUIZ: preload("res://scenes/scenes/screens/quiz/mixed_quiz.tscn"),
 }
 
 func get_fresh_screen(screen: SoccerGame.ScreenType) -> Screen:

@@ -1,0 +1,313 @@
+[gd_scene load_steps=28 format=3 uid="uid://cw1n5wup2wmfl"]
+
+[ext_resource type="Script" uid="uid://bqvvlb1doikmc" path="res://scenes/scripts/mixed_quiz.gd" id="1_0173o"]
+[ext_resource type="Texture2D" uid="uid://dtlrjqth456l0" path="res://assets/ui/PNG/Quiz/quiz_board_background.png" id="2_5lp2j"]
+[ext_resource type="Texture2D" uid="uid://cv6qg2edbslxi" path="res://assets/ui/PNG/Quiz/heart_full.tres" id="3_xidng"]
+[ext_resource type="FontFile" uid="uid://c45dcu5gt2sf4" path="res://assets/ui/Font/Kenney Future Narrow.ttf" id="4_i4ng2"]
+[ext_resource type="Texture2D" uid="uid://dyt1hi6wm3yl1" path="res://assets/ui/PNG/Red/Double/button_rectangle_depth_border.png" id="5_ya3y7"]
+[ext_resource type="Texture2D" uid="uid://dcl520m164kby" path="res://assets/ui/PNG/Yellow/Double/button_rectangle_depth_border.png" id="6_7jtfg"]
+[ext_resource type="Texture2D" uid="uid://c1k7kvla0pd83" path="res://assets/ui/PNG/Yellow/Double/icon_cross.png" id="6_i4ng2"]
+[ext_resource type="FontFile" uid="uid://cyur175ibhsdw" path="res://assets/ui/Font/Kenney Future.ttf" id="7_pkov7"]
+[ext_resource type="Texture2D" uid="uid://xgdxjot3dacc" path="res://assets/ui/PNG/Yellow/Double/button_rectangle_depth_gradient.png" id="7_ya3y7"]
+[ext_resource type="Texture2D" uid="uid://c8fk47l4bwo86" path="res://assets/ui/PNG/Green/Double/button_rectangle_depth_border.png" id="8_5g5m5"]
+[ext_resource type="Texture2D" uid="uid://dxdnmijtitj8" path="res://assets/ui/PNG/Yellow/Double/button_rectangle_depth_gloss.png" id="8_7jtfg"]
+[ext_resource type="Texture2D" uid="uid://dduimcfrqrmam" path="res://assets/ui/PNG/Blue/Double/button_rectangle_depth_border.png" id="9_6s8s2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pkov7"]
+texture = ExtResource("7_ya3y7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5g5m5"]
+texture = ExtResource("7_ya3y7")
+modulate_color = Color(0.42879996, 0.64, 0.58015996, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6s8s2"]
+texture = ExtResource("8_7jtfg")
+modulate_color = Color(0.5092, 0.76, 0.68894, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ab711"]
+texture = ExtResource("5_ya3y7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s5mit"]
+texture = ExtResource("6_7jtfg")
+modulate_color = Color(1, 1, 1, 0.89411765)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xwkaf"]
+texture = ExtResource("6_7jtfg")
+modulate_color = Color(1, 1, 1, 0.89411765)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_shxf6"]
+texture = ExtResource("6_7jtfg")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j5jk3"]
+texture = ExtResource("6_7jtfg")
+modulate_color = Color(1, 1, 1, 0.89411765)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2pnqi"]
+texture = ExtResource("6_7jtfg")
+modulate_color = Color(1, 1, 1, 0.85882354)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cjuy7"]
+texture = ExtResource("8_5g5m5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qg110"]
+texture = ExtResource("8_5g5m5")
+modulate_color = Color(1, 1, 1, 0.89411765)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lowp3"]
+texture = ExtResource("8_5g5m5")
+modulate_color = Color(1, 1, 1, 0.85882354)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gvtwv"]
+texture = ExtResource("9_6s8s2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pbq5f"]
+texture = ExtResource("9_6s8s2")
+modulate_color = Color(1, 1, 1, 0.89411765)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kqb08"]
+texture = ExtResource("9_6s8s2")
+modulate_color = Color(1, 1, 1, 0.85882354)
+
+[node name="MixedQuiz" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_0173o")
+
+[node name="FondoCampo" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(400, 350)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5lp2j")
+expand_mode = 1
+
+[node name="HeartsContainer" type="HBoxContainer" parent="FondoCampo"]
+layout_mode = 1
+offset_left = 45.0
+offset_top = 35.0
+offset_right = 578.0
+offset_bottom = 215.0
+scale = Vector2(0.5, 0.5)
+
+[node name="HeartTextureRect" type="TextureRect" parent="FondoCampo/HeartsContainer"]
+layout_mode = 2
+texture = ExtResource("3_xidng")
+
+[node name="HeartTextureRect2" type="TextureRect" parent="FondoCampo/HeartsContainer"]
+layout_mode = 2
+texture = ExtResource("3_xidng")
+
+[node name="HeartTextureRect3" type="TextureRect" parent="FondoCampo/HeartsContainer"]
+layout_mode = 2
+texture = ExtResource("3_xidng")
+
+[node name="Label" type="Label" parent="FondoCampo"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -186.0
+offset_top = 60.0
+offset_right = 414.0
+offset_bottom = 160.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_i4ng2")
+theme_override_font_sizes/font_size = 16
+text = "¿Cual es tu nombre?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotonVolver" type="Button" parent="FondoCampo"]
+custom_minimum_size = Vector2(180, 100)
+layout_mode = 0
+offset_left = 498.0
+offset_top = 523.0
+offset_right = 678.0
+offset_bottom = 623.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_pkov7")
+theme_override_font_sizes/font_size = 25
+theme_override_icons/icon = ExtResource("6_i4ng2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_pkov7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5g5m5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6s8s2")
+text = "Volver a
+Menu
+"
+icon_alignment = 1
+
+[node name="BotonOpcion1" type="Button" parent="FondoCampo"]
+custom_minimum_size = Vector2(270, 140)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -326.0
+offset_top = -154.0
+offset_right = -56.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_ab711")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_s5mit")
+theme_override_styles/hover = SubResource("StyleBoxTexture_xwkaf")
+text = "RESPUESTA CORRECTA
+"
+
+[node name="LabelBotonOpcion1" type="Label" parent="FondoCampo/BotonOpcion1"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = -57.0
+offset_right = 123.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0.1254902, 0.11372549, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("7_pkov7")
+text = "RESPUESTA INCORRECTA!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotonOpcion2" type="Button" parent="FondoCampo"]
+custom_minimum_size = Vector2(270, 140)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -326.0
+offset_top = 26.0
+offset_right = -56.0
+offset_bottom = 166.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_shxf6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_j5jk3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2pnqi")
+
+[node name="LabelBotonOpcion2" type="Label" parent="FondoCampo/BotonOpcion2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = -57.0
+offset_right = 123.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.92156863, 0.8666667, 0.18039216, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("7_pkov7")
+text = "RESPUESTA CORRECTA!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotonOpcion3" type="Button" parent="FondoCampo"]
+custom_minimum_size = Vector2(270, 140)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 74.0
+offset_top = -154.0
+offset_right = 344.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_cjuy7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qg110")
+theme_override_styles/hover = SubResource("StyleBoxTexture_lowp3")
+
+[node name="LabelBotonOpcion3" type="Label" parent="FondoCampo/BotonOpcion3"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = -58.0
+offset_right = 123.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.17254902, 0.85490197, 0.12156863, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("7_pkov7")
+text = "Usa el mouse para 
+darle click a las 
+respuestas y si es 
+correcta consigues 
+un punto, "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotonOpcion4" type="Button" parent="FondoCampo"]
+custom_minimum_size = Vector2(270, 140)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 74.0
+offset_top = 26.0
+offset_right = 344.0
+offset_bottom = 166.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_gvtwv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pbq5f")
+theme_override_styles/hover = SubResource("StyleBoxTexture_kqb08")
+
+[node name="LabelBotonOpcion4" type="Label" parent="FondoCampo/BotonOpcion4"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.0
+offset_top = -57.0
+offset_right = 123.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.17254902, 0.6627451, 0.9098039, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("7_pkov7")
+text = "si la respuesta no es 
+correcta, se te quita 
+un corazon. tienes 3 y 
+cada uno aguanta 
+3 golpes, suerte."
+horizontal_alignment = 1
+vertical_alignment = 1
